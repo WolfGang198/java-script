@@ -13,3 +13,4 @@ function imprimir(operacao, x, y){
 
 imprimir(soma, 10, 10);
 imprimir(sub, 10, 8);
+imprimir(10, 10, 8);

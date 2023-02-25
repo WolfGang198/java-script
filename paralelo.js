@@ -1,4 +1,5 @@
 function f4(){
+    setTimeout(() => console.log('Timeout chamada'), 5000);
     console.log("Função 4 executou");
 }
 

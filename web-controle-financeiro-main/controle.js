@@ -2,13 +2,12 @@ const form = document.querySelector("#form");
 const descrTransacaoInput = document.querySelector("#descricao");
 const valorTransacaoInput = document.querySelector("#montante");
 const balancoH1 = document.querySelector("#balanco");
-const receitasP = document.querySelector("#din-positivo");
-const despesasP = document.querySelector("#din-negativo");
-const transacoesUl = document.querySelector("#transacoes");
+const receitasP = documento.querySelector("#din-positivo");
+const despesasP = documento.querySelector("#din-negativo");
 
 form.addEventListener("submit", (event) => {
     event.preventDefault();
-    
+    alert("ok");
     const descrTransacao = descrTransacaoInput.value.trim();
     const valorTransacao = valorTransacaoInput.value.trim();
 
@@ -27,7 +26,6 @@ form.addEventListener("submit", (event) => {
 
     somaAoSaldo(transacao);
     somaReceitaOuDespesa(transacao);
-    addTransacaoAoDOM(transacao);
 
     descrTransacaoInput.value = "";
     valorTransacaoInput.value = "";
@@ -39,6 +37,7 @@ function somaAoSaldo(transacao){
     //0.00
     total = parseFloat(total);
     total = total + transacao.valor;
+    alert(total);
     balancoH1.innerHTML = `R$${total.toFixed(2)}`;
 }
 
@@ -49,16 +48,4 @@ function somaReceitaOuDespesa(transacao){
     valorAtual = parseFloat(valorAtual);
     valorAtual = valorAtual + Math.abs(transacao.valor);
     elemento.innerHTML = `${substituir} ${valorAtual}`;
-}
-
-function addTransacaoAoDOM(transacao){
-    const operador = transacao.valor > 0 ? "" : "-"
-    const classe = transacao.valor > 0 ? "positivo" : "negativo"
-    const li = document.createElement("li")
-    li.classList.add(classe)
-
-    li.innerHTML = `${transacao.descricao} <span>${operador}R$${Math.abs(transacao.valor)}
-    </span><button class="delete-btn">X</button>`
-
-    transacoesUl.append(li)
 }

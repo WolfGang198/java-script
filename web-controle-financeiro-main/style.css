@@ -1,7 +1,7 @@
 @import url("https://fonts.googleapis.com/css2?family=Varela+Round&display=swap");
 
 body {
-  background-color: #512da8;
+  background-color: #161618;
   display: flex;
   flex-direction: column;
   align-items: center;
@@ -9,7 +9,7 @@ body {
   max-height: 50vh;
   margin: 0;
   font-family: "Varela Round", sans-serif;
-  color: #d1c4e9;
+  color: #ece9f1;
 }
 
 .container {
@@ -26,7 +26,7 @@ h1 {
 }
 
 .title {
-  color: #d1c4e9;
+  color: #f6f5f8;
 }
 
 h3 {
@@ -40,7 +40,7 @@ h3 {
 
 .item {
   padding: 15px;
-  background-color: #e040fb;
+  background-color: #5f5d5f;
   border-radius: 10px;
 }
 
@@ -102,7 +102,7 @@ input[type="number"] {
 
 .btn {
   cursor: pointer;
-  background-color: #512da8;
+  background-color: #0f0e0f;
   box-shadow: var(--box-shadow);
   color: #fff;
   border: 0;
